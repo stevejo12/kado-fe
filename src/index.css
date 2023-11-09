@@ -4,6 +4,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --kado-fontSize-2xl: 1.5rem;
+  
+  --kado-avatar-size: 6rem;
+
+  --kado-border-full: 9999px;
+  
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
