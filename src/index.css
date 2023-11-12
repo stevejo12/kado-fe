@@ -2,15 +2,25 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
+  color: var(--kado-primary-color);
 }
 
 :root {
+  --kado-primary-color: #0D1E28;
+  --kado-secondary-color: #a9a9a9;
+
+  --kado-fontSize-sm: 0.875rem;
   --kado-fontSize-2xl: 1.5rem;
   
   --kado-avatar-size: 6rem;
 
   --kado-border-full: 9999px;
+
+  --kado-sizes-10: 2.5rem;
   
+  --kado-space-2: 0.5rem;
+  --kado-space-4: 1rem;
 }
 
 body {

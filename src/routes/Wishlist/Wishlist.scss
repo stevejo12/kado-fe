@@ -13,7 +13,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 var(--kado-space-4);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -42,9 +42,47 @@
       .wishlist-userNameTag {
         display: flex;
         flex-direction: column;
+        text-align: center;
+        padding: var(--kado-space-2) 0;
 
         .wishlist-userName {
           font-size: var(--kado-fontSize-2xl);
+        }
+
+        .wishlist-userTag {
+          color: var(--kado-secondary-color);
+          font-size: var(--kado-fontSize-sm);
+        }
+      }
+
+      .wishlist-userBioSocials {
+        display: flex;
+        flex-direction: column;
+        gap: var(--kado-space-2);
+        align-items: center;
+
+        .wishlist-userBio {
+          color: var(--kado-secondary-color);
+          font-size: var(--kado-fontSize-sm);
+        }
+
+        .wishlist-userSocials {
+          display: flex;
+          gap: var(--kado-space-2);
+          
+          .wishlist-userSocials-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: var(--kado-sizes-10);
+            height: var(--kado-sizes-10);
+            border-radius: var(--kado-border-full);
+            cursor: pointer;
+
+            &:hover {
+              background-color: #f3f8fb;
+            }
+          }
         }
       }
     }

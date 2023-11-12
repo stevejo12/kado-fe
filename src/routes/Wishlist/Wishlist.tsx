@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitch, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import "./Wishlist.scss";
 
@@ -24,6 +26,22 @@ const Wishlist = () => {
           <div className="wishlist-userNameTag">
             <span className="wishlist-userName">Jeco Star</span>
             <span className="wishlist-userTag">@jecostar</span>
+          </div>
+          <div className="wishlist-userBioSocials">
+            <p className='wishlist-userBio'>
+              Hello I am a streamer who also models acts and loves sports/fitness. I love all my followers because o am blessed with the nicest and most supportive group ever!
+            </p>
+            <div className="wishlist-userSocials">
+              <a className='wishlist-userSocials-link'>
+                <FontAwesomeIcon icon={faInstagram} />
+              </a>
+              <a className='wishlist-userSocials-link'>
+                <FontAwesomeIcon icon={faTwitter} />
+              </a>
+              <a className='wishlist-userSocials-link'>
+                <FontAwesomeIcon icon={faTwitch}/>
+              </a>
+            </div>
           </div>
         </div>
       </div>
