@@ -9,81 +9,95 @@
     height: 7rem;
   }
 
-  .wishlist-content {
+  .wishlist-userProfile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--kado-space-4);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
-    .wishlist-userProfile {
+    .wishlist-userAvatar {
+      display: inline-flex;
+      position: relative;
+      width: var(--kado-avatar-size);
+      height: var(--kado-avatar-size);
+      margin-top: calc(var(--kado-avatar-size) / 2 * -1);
+
+      .wishlist-userAvatar-img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: var(--kado-border-full);
+        position: absolute;
+      }
+    }
+
+    .wishlist-userNameTag {
       display: flex;
       flex-direction: column;
+      text-align: center;
+      padding: var(--kado-space-2) 0;
+
+      .wishlist-userName {
+        font-size: var(--kado-fontSize-2xl);
+      }
+
+      .wishlist-userTag {
+        color: var(--kado-secondary-color);
+        font-size: var(--kado-fontSize-sm);
+      }
+    }
+
+    .wishlist-userBioSocials {
+      display: flex;
+      flex-direction: column;
+      gap: var(--kado-space-2);
       align-items: center;
+      width: 100%;
 
-      .wishlist-userAvatar {
-        display: inline-flex;
-        position: relative;
-        width: var(--kado-avatar-size);
-        height: var(--kado-avatar-size);
-        margin-top: calc(var(--kado-avatar-size) / 2 * -1);
-  
-        .wishlist-userAvatar-img {
-          width: 100%;
-          height: 100%;
-          display: block;
-          border-radius: var(--kado-border-full);
-          position: absolute;
-        }
+      .wishlist-userBio {
+        color: var(--kado-secondary-color);
+        font-size: var(--kado-fontSize-sm);
       }
 
-      .wishlist-userNameTag {
+      .wishlist-userSocials {
         display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding: var(--kado-space-2) 0;
-
-        .wishlist-userName {
-          font-size: var(--kado-fontSize-2xl);
-        }
-
-        .wishlist-userTag {
-          color: var(--kado-secondary-color);
-          font-size: var(--kado-fontSize-sm);
-        }
-      }
-
-      .wishlist-userBioSocials {
-        display: flex;
-        flex-direction: column;
         gap: var(--kado-space-2);
-        align-items: center;
-
-        .wishlist-userBio {
-          color: var(--kado-secondary-color);
-          font-size: var(--kado-fontSize-sm);
-        }
-
-        .wishlist-userSocials {
+        
+        .wishlist-userSocials-link {
           display: flex;
-          gap: var(--kado-space-2);
-          
-          .wishlist-userSocials-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: var(--kado-sizes-10);
-            height: var(--kado-sizes-10);
-            border-radius: var(--kado-border-full);
-            cursor: pointer;
+          align-items: center;
+          justify-content: center;
+          min-width: var(--kado-sizes-10);
+          height: var(--kado-sizes-10);
+          border-radius: var(--kado-border-full);
+          cursor: pointer;
 
-            &:hover {
-              background-color: #f3f8fb;
-            }
+          &:hover {
+            background-color: #f3f8fb;
           }
         }
+      }
+    }
+  }
+
+  .wishlist-listContainer {
+    display: flex;
+    flex-direction: column;
+
+    .wishlist-listTab {
+      display: flex;
+      gap: var(--kado-space-2);
+      justify-content: center;
+      border-bottom: 1px solid var(--kado-border-color);
+
+      > * {
+        display: flex;
+        gap: var(--kado-space-2);
+        padding: var(--kado-space-2-5) var(--kado-space-2);
+        cursor: pointer;
       }
     }
   }
