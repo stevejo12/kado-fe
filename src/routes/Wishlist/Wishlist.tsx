@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitch, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faGift } from '@fortawesome/free-solid-svg-icons';
+import { faGift, faPeopleGroup } from '@fortawesome/free-solid-svg-icons';
 
 import "./Wishlist.scss";
+import Wish from '../../components/Wish/Wish';
 
 const Wishlist = () => {
   const [userHeaderPictureLink, setUserHeaderPictureLink] = useState<string>("");
+  const [wishlistTab, setWishlistTab] = useState<number>(0);
 
   return (
     <div className='wishlist-container'>
@@ -46,17 +48,37 @@ const Wishlist = () => {
       </div>
       <div className="wishlist-listContainer">
         <div className="wishlist-listTab">
-          <a className="wishlist-list">
-            <FontAwesomeIcon icon={faGift}/>
+          <a 
+            className={"wishlist-list " + (wishlistTab === 0 ? "focus" : "")}
+            onClick={() => setWishlistTab(0)}
+          >
+            {wishlistTab === 0 && <FontAwesomeIcon icon={faGift}/>}
             <p>Wishlist</p>
           </a>
-          <a className="wishlist-list">
+          <a 
+            className={"wishlist-list " + (wishlistTab === 1 ? "focus" : "")}
+            onClick={() => setWishlistTab(1)}
+          >
+            {wishlistTab === 1 && <FontAwesomeIcon icon={faPeopleGroup}/>}
             <p>Gifters</p>
             <span>3</span>
           </a>
         </div>
       </div>
-      <div className="wishlist-content">
+      <div className="wishlist-contentContainer">
+        <div className="wishlist-contentLayout">
+          {/* <Wish /> */}
+          <div className="wishlist-noWish">
+            <FontAwesomeIcon icon={faGift} size='3x' />
+            <div className="wishlist-noWish-textContainer">
+              <p>No Gifts Added</p>
+              <pre>
+                This creator didn't add items to their wishlist yet. <br />
+                You can suggest a gift
+              </pre>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

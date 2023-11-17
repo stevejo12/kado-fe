@@ -1,0 +1,15 @@
+{
+  "id": 1,
+  "displayName": "Jeco Star",
+  "username": "jecostar",
+  "wishlist": [
+    {
+      "id": 1,
+      "title": "x Yovanna Ventura Rei Dress",
+      "description": "\"Size small\"",
+      "price": 159.54,
+      "currency": "$",
+      "featured": false
+    }
+  ]
+}

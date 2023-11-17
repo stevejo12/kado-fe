@@ -9,6 +9,7 @@
 :root {
   --kado-primary-color: #0D1E28;
   --kado-secondary-color: #a9a9a9;
+  --kado-brand-color: #4A5568;
   --kado-border-color: #E2E8F0;
 
   --kado-fontSize-sm: 0.875rem;
@@ -22,6 +23,7 @@
   
   --kado-space-2: 0.5rem;
   --kado-space-2-5: 0.625rem;
+  --kado-space-3: 0.75rem;
   --kado-space-4: 1rem;
 }
 
@@ -34,6 +36,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+pre {
+  font-family: inherit;
 }
 
 .btn {
